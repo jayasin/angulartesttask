@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "nalliSilks"
+  "defaultProject": "nalliSilks",
+  "cli": {
+    "analytics": false
+  }
 }
