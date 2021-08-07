@@ -1,0 +1,47 @@
+<app-subheading sliderTitle={{sliderTitle}}></app-subheading>
+
+<swiper
+  [slidesPerView]="4"
+  [spaceBetween]="50"
+  loop="true"
+  navigation="true"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+>
+  <ng-template swiperSlide>
+    <app-sale-item
+      productImage="../assets/saree 2.jpg"
+      productName="Kanchipuram Saree"
+      productCategory="Multi colored"
+      saleAmount="3000"
+      rating="five-star-rating"
+    ></app-sale-item>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-sale-item
+      productImage="../assets/saree 3.jpg"
+      productName="Kanchipuram Saree"
+      productCategory="Multi colored"
+      saleAmount="3000"
+      rating="four-star-rating"
+    ></app-sale-item>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-sale-item
+      productImage="../assets/saree 4.jpg"
+      productName="Kanchipuram Saree"
+      productCategory="Multi colored"
+      saleAmount="3000"
+      rating="four-star-rating"
+    ></app-sale-item>
+  </ng-template>
+  <ng-template swiperSlide>
+    <app-sale-item
+      productImage="../assets/saree 5.jpg"
+      productName="Kanchipuram Saree"
+      productCategory="Multi colored"
+      saleAmount="3000"
+      rating="three-star-rating"
+    ></app-sale-item>
+  </ng-template>
+</swiper>

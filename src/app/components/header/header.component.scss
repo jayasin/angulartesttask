@@ -1,0 +1,79 @@
+.application-header {
+  padding: 15px 100px;
+  border-bottom: 1px solid;
+  display: flex;
+  .brand-logo {
+    width: 70px;
+  }
+
+  .navigation-links {
+    display: flex;
+    .header-menu {
+        width: auto;
+        background: none;
+        outline: transparent;
+        border: none;
+        font-weight: 600;
+        margin: 0 10px;
+    }
+  }
+
+  .input-with-icon {
+    width: 100%;
+    i {
+      position: absolute;
+    }
+
+    .icon {
+      padding: 10px;
+      color: #6d716d;
+      text-align: center;
+    }
+
+    .input-field {
+      width: 250px;
+      padding: 10px 10px 10px 30px;
+      text-align: left;
+    }
+  }
+
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 56px;
+  }
+
+  .menu-wrapper {
+    padding: 9px;
+    color: #6d716d;
+    border-top: 1px solid #6d716d;
+    border-bottom: 1px solid #6d716d;
+    border-right: 1px solid #6d716d;
+  }
+
+  .icons-wrapper {
+    width: 90px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa {
+      width: 40%;
+      color: #a21212;
+      font-size: 20px;
+    }
+  }
+
+  .profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 35px;
+      border-radius: 50px;
+      border: 1px solid #000;
+    }
+  }
+}

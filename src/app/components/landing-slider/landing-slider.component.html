@@ -1,0 +1,41 @@
+<div class="landing-Slider">
+  <swiper
+    [slidesPerView]="1"
+    [autoplay]="autoPlayProps"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+  >
+    <ng-template swiperSlide>
+      <div class="top-offer-slides">
+        <div>
+            <p>Step outdoors and get noticed with a spectacular range of color
+                popping leggings from <strong>Twin Birds !</strong> </p>
+        </div>
+        <div>
+          <img src="../../../assets/twinbirds.jpg" alt="" />
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+        <div class="top-offer-slides">
+          <div>
+            <p>August sales offers <strong>Only Two Days!</strong> </p>
+          </div>
+          <div>
+            <img src="../../../assets/twodays.jpg" alt="" />
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="top-offer-slides">
+          <div>
+            <p>Exclusive <strong>Wedding Collections !</strong> at 30% OFF </p>
+          </div>
+          <div>
+            <img src="../../../assets/wedding saree.jpg" alt="" />
+          </div>
+        </div>
+      </ng-template>
+  </swiper>
+</div>
