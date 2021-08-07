@@ -1,20 +1,12 @@
-<app-subheading sliderTitle="{{ sliderTitle }}"></app-subheading>
-
-<swiper
-  [slidesPerView]="4"
-  [spaceBetween]="40"
-  loop="true"
-  navigation="true"
->
-  <ng-container *ngFor="let product of products">
-    <ng-template swiperSlide>
-      <app-sale-item
-        productImage={{product.image}}
-        productName="{{ product.title }}"
-        productCategory="{{ product.category}}"
-        saleAmount="{{ product.price }}"
-        rating="{{ getStarRating(product.starRating) }}"
-      ></app-sale-item>
-    </ng-template>
-  </ng-container>
-</swiper>
+<div class="co">
+  <app-subheading sliderTitle="{{ sliderTitle }}"></app-subheading>
+  <swiper [slidesPerView]="4" [spaceBetween]="40" loop="true" navigation="true">
+    <ng-container *ngFor="let product of products">
+      <ng-template swiperSlide>
+        <app-sale-item productImage={{product.image}} productName="{{ product.title }}"
+          productCategory="{{ product.category}}" saleAmount="{{ product.price }}"
+          rating="{{ getStarRating(product.starRating) }}"></app-sale-item>
+      </ng-template>
+    </ng-container>
+  </swiper>
+</div>
