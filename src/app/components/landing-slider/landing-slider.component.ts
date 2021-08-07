@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import SwiperCore, {
   Navigation,
-  Pagination, 
+  Pagination,
   Autoplay
 } from 'swiper/core';
 
@@ -13,24 +13,9 @@ SwiperCore.use([Navigation, Pagination, Autoplay]);
   templateUrl: './landing-slider.component.html',
   styleUrls: ['./landing-slider.component.scss']
 })
-export class LandingSliderComponent implements OnInit {
-
+export class LandingSliderComponent {
   autoPlayProps = {
     delay: 2500,
     disableOnInteraction: false
   }
-  
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  onSwiper(swiper) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
- 
-
 }

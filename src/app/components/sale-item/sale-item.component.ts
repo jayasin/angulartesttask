@@ -1,13 +1,13 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
-import { FavouriteService } from 'src/app/services/favourite.service';
+import { Component, Input } from '@angular/core';
+import { CartService } from '../../services/cart.service';
+import { FavouriteService } from '../../services/favourite.service';
 
 @Component({
   selector: 'app-sale-item',
   templateUrl: './sale-item.component.html',
   styleUrls: ['./sale-item.component.scss']
 })
-export class SaleItemComponent implements OnInit, OnChanges {
+export class SaleItemComponent {
 
   @Input() productImage: string;
   @Input() productName: string;
@@ -23,25 +23,16 @@ export class SaleItemComponent implements OnInit, OnChanges {
 
   ) { }
 
-  ngOnInit(): void {
-  }
 
   likeSupport() {
 
     this.favSelect = !this.favSelect
     if (this.favSelect) {
       this.favservice.likeSupport = this.favservice.likeSupport + 1
-      this.favservice.setSharedData(this.favservice.likeSupport)
-
-
     } else {
       this.favservice.likeSupport = this.favservice.likeSupport - 1
-      this.favservice.setSharedData(this.favservice.likeSupport)
-
-
     }
-    console.log(this.favservice.likeSupport);
-
+    this.favservice.setSharedData(this.favservice.likeSupport)
   }
 
 
@@ -49,18 +40,9 @@ export class SaleItemComponent implements OnInit, OnChanges {
     this.cartSelect = !this.cartSelect
     if (this.cartSelect) {
       this.cartservice.cartSupport = this.cartservice.cartSupport + 1
-
-
     } else {
       this.cartservice.cartSupport = this.cartservice.cartSupport - 1
-
     }
     this.cartservice.setSharedData(this.cartservice.cartSupport)
-
   }
-
-  ngOnChanges(): void {
-
-  }
-
 }

@@ -1,5 +1,5 @@
 .application-header {
-  padding: 15px 100px;
+  padding: 15px 50px;
   border-bottom: 1px solid;
   display: flex;
 
@@ -29,6 +29,8 @@
       border: none;
       font-weight: 600;
       margin: 0 10px;
+      padding: 0;
+      white-space: nowrap;
     }
   }
 

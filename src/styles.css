@@ -17,3 +17,8 @@ body {
 .swiper-button-next {
     color: #000;
 }
+
+input:focus,
+button:focus {
+    outline: none;
+}

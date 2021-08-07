@@ -3,7 +3,7 @@ import { Iproducts } from 'src/app/models/products.model';
 
 import SwiperCore, {
   Navigation,
- 
+
   Virtual,
 } from 'swiper/core';
 
@@ -14,22 +14,9 @@ SwiperCore.use([Navigation, Virtual]);
   templateUrl: './common-slider.component.html',
   styleUrls: ['./common-slider.component.scss'],
 })
-export class CommonSliderComponent implements OnInit {
+export class CommonSliderComponent {
   @Input() sliderTitle: string;
   @Input() products: Iproducts[];
-
-  constructor() {}
-
-  ngOnInit(): void {
-    console.log("the Priodcts", this.products)
-  }
-
-  onSwiper(swiper) {
-    
-  }
-  onSlideChange() {
-    
-  }
 
   public getStarRating(rating: number) {
     switch (rating) {

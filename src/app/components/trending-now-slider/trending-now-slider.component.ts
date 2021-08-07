@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import SwiperCore, {
   Navigation,
@@ -11,18 +11,4 @@ SwiperCore.use([Navigation]);
   templateUrl: './trending-now-slider.component.html',
   styleUrls: ['./trending-now-slider.component.scss']
 })
-export class TrendingNowSliderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  onSwiper(swiper) {
-   
-  }
-  onSlideChange() {
-   
-  }
-
-}
+export class TrendingNowSliderComponent {}

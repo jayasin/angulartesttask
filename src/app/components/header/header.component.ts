@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
-import { FavouriteService } from 'src/app/services/favourite.service';
+import { CartService } from '../../services/cart.service';
+import { FavouriteService } from '../../services/favourite.service';
 
 
 @Component({
@@ -26,8 +26,5 @@ export class HeaderComponent implements OnInit {
     this.cartservice.receiveSharedData().subscribe((data) => {
       this.cartbadge = data
     })
-
-
   }
-
 }
