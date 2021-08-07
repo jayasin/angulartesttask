@@ -11,6 +11,7 @@ import { SaleItemComponent } from './components/sale-item/sale-item.component';
 import { CommonSliderComponent } from './components/common-slider/common-slider.component';
 import { TrendingNowSliderComponent } from './components/trending-now-slider/trending-now-slider.component';
 import { SubheadingComponent } from './components/subheading/subheading.component';
+import { ProductServiceService } from './services/product-service.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { SubheadingComponent } from './components/subheading/subheading.componen
     MatInputModule,
     SwiperModule
   ],
-  providers: [],
+  providers: [ProductServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
