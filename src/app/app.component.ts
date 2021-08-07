@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Iproducts } from './models/products.model';
+import { ProductService } from './services/product-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'nalliSilks';
+
+  newArrivals: Iproducts[] = this.productService.getNewArrivals(); 
+  recentItems: Iproducts[] = this.productService.getRecentlyViewed();
+  similarItems: Iproducts[] = this.productService.getSimilarItems();
+  
+  constructor(private productService: ProductService) {
+
+  }
 }
